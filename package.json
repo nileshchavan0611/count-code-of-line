@@ -1,8 +1,8 @@
 {
   "name": "count-code-of-line",
-  "displayName": "count code of line",
-  "description": "Count number of line in whole project",
-  "version": "0.0.1",
+  "displayName": "Count Code of Line",
+  "description": "Count the number of lines in your entire project, excluding specified directories and files.",
+  "version": "1.0.0",
   "engines": {
     "vscode": "^1.84.0"
   },
@@ -14,13 +14,11 @@
     "commands": [
       {
         "command": "count-code-of-line.countLines",
-        "title": "Count Line"
+        "title": "Count Lines of Code"
       }
     ]
   },
-  "activationEvents": [
-    "*"
-  ],
+  "activationEvents": [],
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
@@ -42,5 +40,15 @@
   },
   "dependencies": {
     "ignore": "^5.3.0"
-  }
+  },
+  "author": "Nilesh Chavan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nileshchavan0611/count-code-of-line.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nileshchavan0611/count-code-of-line/issues"
+  },
+  "homepage": "https://github.com/nileshchavan0611/count-code-of-line#readme"
 }
