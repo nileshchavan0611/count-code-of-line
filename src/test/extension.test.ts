@@ -1,15 +1,24 @@
-import * as assert from 'assert';
+import * as assert from "assert";
+import * as vscode from "vscode";
+import * as myExtension from "../extension";
+import path from "path";
+import ignore from "ignore";
 
-// You can import and use all API from the 'vscode' module
-// as well as import your extension to test it
-import * as vscode from 'vscode';
-// import * as myExtension from '../../extension';
+suite("Extension Test Suite", () => {
+  vscode.window.showInformationMessage("Start all tests.");
 
-suite('Extension Test Suite', () => {
-	vscode.window.showInformationMessage('Start all tests.');
-
-	test('Sample test', () => {
-		assert.strictEqual(-1, [1, 2, 3].indexOf(5));
-		assert.strictEqual(-1, [1, 2, 3].indexOf(0));
-	});
+  test("Count lines of code test", async () => {
+    // Use the temp.js file as the test file
+    const uri = path.join(__dirname, "temp");
+    const ig = ignore();
+    const count = await myExtension.countLines(
+      uri,
+      ig,
+      uri,
+      () => {}
+    );
+	console.log(count);    // Replace expectedCount with the expected number of lines in your temp.js file
+    const expectedCount = 5;
+    assert.strictEqual(count, expectedCount);
+  });
 });

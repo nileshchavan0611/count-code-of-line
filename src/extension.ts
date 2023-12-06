@@ -129,7 +129,7 @@ async function countFiles(
   return totalFiles;
 }
 
-async function countLines(
+export async function countLines(
   dir: string,
   ig: ReturnType<typeof ignore>,
   baseDir: string,
