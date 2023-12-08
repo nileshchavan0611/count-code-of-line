@@ -4,6 +4,11 @@ All notable changes to the "Count Code of Line" extension will be documented in 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.1.0] - 2023-12-07
+
+### Added
+- Added support for generating the report in CSV format.
+
 ## [1.0.0] - 2023-12-06
 
 ### Added
