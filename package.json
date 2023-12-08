@@ -9,6 +9,8 @@
   "categories": [
     "Other"
   ],
+  "icon": "assets/logo.png",
+  "publisher": "BuzzyEvent",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
