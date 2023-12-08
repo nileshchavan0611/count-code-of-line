@@ -1,8 +1,8 @@
 import * as assert from "assert";
 import * as vscode from "vscode";
-import * as myExtension from "../extension";
 import path from "path";
 import ignore from "ignore";
+import { countLines } from "../modules/fileCounter";
 
 suite("Extension Test Suite", () => {
   vscode.window.showInformationMessage("Start all tests.");
@@ -11,7 +11,7 @@ suite("Extension Test Suite", () => {
     // Use the temp.js file as the test file
     const uri = path.join(__dirname, "temp");
     const ig = ignore();
-    const count = await myExtension.countLines(
+    const count = await countLines(
       uri,
       ig,
       uri,

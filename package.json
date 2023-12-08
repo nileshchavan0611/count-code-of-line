@@ -16,7 +16,11 @@
     "commands": [
       {
         "command": "count-code-of-line.countLines",
-        "title": "Count Lines of Code"
+        "title": "Count Lines of Code: Text File"
+      },
+      {
+        "command": "count-code-of-line.countLinesCSV",
+        "title": "Count Lines of Code: CSV File"
       }
     ]
   },
